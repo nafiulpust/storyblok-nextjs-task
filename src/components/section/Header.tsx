@@ -10,7 +10,7 @@ const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
     <div className="bg-[#1b140b]">
       <div className="flex items-center justify-between max-w-[1200px] mx-auto p-4 py-10">
         <div>
-          <Image src="/logo.avif" alt="logo" width={100} height={100} />
+          <Link href="/"><Image src="/logo.avif" alt="logo" width={100} height={100} /></Link>
         </div>
         <div>
           <ul className="flex items-center gap-16">
