@@ -25,8 +25,8 @@ const Gallery = ({ blok }: { blok: GalleryBlok }) => {
       className=" bg-[#1b140b]"
     >
       <div className="max-w-[1000px] mx-auto p-4 py-32">
-        <div className="flex justify-between items-center gap-18">
-          <div className=" w-1/2">
+        <div className="flex md:flex-row flex-col justify-between items-center gap-18">
+          <div className="md:w-1/2 w-full">
             {blok?.image?.filename && (
               <Image
                 src={blok.image.filename}
@@ -37,8 +37,8 @@ const Gallery = ({ blok }: { blok: GalleryBlok }) => {
               />
             )}
           </div>
-          <div className="w-1/2">
-            <h2 className="mt-5 text-[60px] font-normal uppercase leading-[76px] text-start text-[#FFFFFFCC] relative z-20">
+          <div className="md:w-1/2 w-full">
+            <h2 className="mt-5 md:text-[60px] text-[30px] font-normal uppercase md:leading-[76px] leading-[32px] text-start text-[#FFFFFFCC] relative z-20">
               {blok?.title}
             </h2>
           </div>

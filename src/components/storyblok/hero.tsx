@@ -24,21 +24,21 @@ const Hero = ({ blok }: { blok: HeroBlok }) => {
       className="flex flex-col bg-[#1b140b]  "
     >
       <div className="max-w-[1200px] w-full mx-auto p-4 py-10">
-        <div className="flex justify-between">
-          <div className="w-[50%]">
+        <div className="flex md:flex-row flex-col justify-between">
+          <div className="md:w-[50%] w-full">
             <div className="max-w-[70%] border-t border-[#FFFFFF40]"></div>
-            <h1 className="mt-5 text-[72px] font-normal uppercase leading-[76px] text-start text-[#FFFFFFCC] relative z-20">
+            <h1 className="mt-5 md:text-[72px] text-[36px] font-normal uppercase md:leading-[76px] leading-[42px] text-start text-[#FFFFFFCC] relative z-20">
               {blok?.Title}
             </h1>
           </div>
-          <div className="w-[50%]">
-            <div className="richtext text-[#e5e7eb] ps-[100px] text-[20px] font-light">
+          <div className="md:w-[50%] w-full">
+            <div className="richtext text-[#e5e7eb] md:ps-[100px] text-[20px] font-light">
               {parse(renderRichText(blok?.description) ?? "")}
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-[1200px] w-full mx-auto px-4 mt-[-130px]">
+      <div className="max-w-[1200px] w-full mx-auto px-4 md:mt-[-130px]">
         {blok?.Images?.filename && (
           <Image
             src={blok.Images.filename}
